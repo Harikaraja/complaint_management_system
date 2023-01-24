@@ -72,7 +72,7 @@
                         </g>
                       </svg></span>-->
                       <div class="collage_logo" style="display:inline-flex">
-                        <img class="image_logo" style="margin-top:0px;" src="{% static'assets\clg logo.png' %}"/>
+                        <img class="image_logo" style="margin-top:0px;" src="{% static 'assets\clg logo.png' %}"/>
                         <h2 class="brand-text mb-0" style="color:blueviolet;font-weight: bold;">JNTU GV</h2></a></li>
                       </div></a></li>
               </ul>
@@ -205,7 +205,7 @@
                     <li class="scrollable-container media-list ps"><a class="d-flex" href="javascript:void(0)">
                         <div class="media d-flex align-items-start">
                           <div class="media-left">
-                            <div class="avatar"><img src="{% static'app-assets\images\portrait\small\avatar-s-15.jpg' %}" alt="avatar" width="32" height="32"></div>
+                            <div class="avatar"><img src="{% static 'app-assets\images\portrait\small\avatar-s-15.jpg' %}" alt="avatar" width="32" height="32"></div>
                           </div>
                           <div class="media-body">
                             <p class="media-heading"><span class="font-weight-bolder">Congratulation Sam 🎉</span>winner!</p><small class="notification-text"> Won the monthly best seller badge.</small>
@@ -291,7 +291,7 @@
                 </div><small class="search-data-size mr-50 text-muted">'17kb</small></a></li>
             <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
                 <div class="d-flex">
-                  <div class="mr-75"><img src="{% static\app-assets\images\icons\jpg.png' %}" alt="png" height="32"></div>
+                  <div class="mr-75"><img src="{% static 'app-assets\images\icons\jpg.png' %}" alt="png" height="32"></div>
                   <div class="search-data">
                     <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
                   </div>
@@ -1086,18 +1086,14 @@
                       </select>
                   </div>
                   </div>
-                  <div class="col-md-6 mb-1" data-select2-id="52">
-                    <label>Year</label>
-                    <div class="position-relative" data-select2-id="51"><select data-placeholder="Select a state..." class="select2-icons form-control select2-hidden-accessible" id="select2-icons" data-select2-id="select2-icons" tabindex="-1" aria-hidden="true">
-                      <optgroup label="Year" data-select2-id="59">
-                        <option value="CSE"data-icon="computer" selected="" data-select2-id="25">1st year</option>
-                        <option value="MECH" data-icon="mechanic" data-select2-id="60">2nd year</option>
-                        <option value="ECE" data-icon="electronics" data-select2-id="61">3rd year</option>
-                        <option value="EEE" data-icon="electrical" data-select2-id="62">4th year</option>
-                      </optgroup>
-                      
-                    </select>
-                </div>
+                  <div class="col-md-6 col-12">
+                    <label for="phone-number">Quarter No.</label>
+                    <div class="input-group input-group-merge">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"></span>
+                        </div>
+                        <input type="text" class="form-control phone-number-mask" placeholder="3333" id="phone-number">
+                    </div>
                 </div>
                     <div class="col-md-6 col-12">
                         <div class="form-group">
@@ -1114,19 +1110,30 @@
                         <label>Type of Complaint</label>
                         <div class="position-relative" data-select2-id="51"><select data-placeholder="Select a state..." class="select2-icons form-control select2-hidden-accessible" id="select2-icons" data-select2-id="select2-icons" tabindex="-1" aria-hidden="true">
                           <optgroup label="Compalints" data-select2-id="59">
-                            <option value="CSE"data-icon="computer" selected="" data-select2-id="25">Water Complaint</option>
-                            <option value="MECH" data-icon="mechanic" data-select2-id="60">Mess Complaints</option>
-                            <option value="ECE" data-icon="electronics" data-select2-id="61">Hostel Complaints</option>
-                            <option value="EEE" data-icon="electrical" data-select2-id="62">Ragging Complaints</option>
-                            <option value="CIVL" data-icon="civil" data-select2-id="63">Stationary Complaints</option>
-                            <option value="MET" data-icon="metallurgy" data-select2-id="64">Cafeteria Complaints</option>
-                            <option value="MET" data-icon="metallurgy" data-select2-id="64">Hospitality Complaints</option>
-                            <option value="MET" data-icon="metallurgy" data-select2-id="64">Accomodation Complaints</option>
+                            <option value="Water Complaint"data-icon="Water Complaint" selected="" data-select2-id="25">Water Complaint</option>
+                            <option value="Stationary Complaints" data-icon="Stationary Complaints" data-select2-id="63">Stationary Complaints</option>
+                            <option value="Cafeteria Complaints" data-icon="Cafeteria Complaints" data-select2-id="64">Cafeteria Complaints</option>
+                            <option value="Hospitality Complaints" data-icon="Hospitality Complaints" data-select2-id="64">Hospitality Complaints</option>
+                            <option value="Accomodation Complaints" data-icon="Accomodation Complaints" data-select2-id="64">Accomodation Complaints</option>
+                            <option value="Carpentry Complaints" data-icon="Carpentry Complaints" data-select2-id="64">Carpentry Complaints</option>
                           </optgroup>
                           
                         </select>
                     </div>
                     </div>
+                    <div class="col-md-6 mb-1" data-select2-id="52">
+                      <label>Time you are Available</label>
+                      <div class="position-relative" data-select2-id="51"><select data-placeholder="Select a state..." class="select2-icons form-control select2-hidden-accessible" id="select2-icons" data-select2-id="select2-icons" tabindex="-1" aria-hidden="true">
+                        <optgroup label="Compalints" data-select2-id="59">
+                          <option value="morning"-icon="morning" selected="" data-select2-id="25">Morning [8:00 am - 12:00 pm]</option>
+                          <option value="afternoon" data-icon="afternoon" data-select2-id="60">AfterNoon [1:00 pm - 4:00 pm]</option>
+                          <option value="evening" data-icon="evening" data-select2-id="61">Evening [4:30 pm - 8:00 pm]</option>
+                          
+                        </optgroup>
+                        
+                      </select>
+                  </div>
+                  </div>
                     <div class="col-md-6 mb-12">
                         
                         <div class="form-group">

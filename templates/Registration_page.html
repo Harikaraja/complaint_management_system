@@ -91,11 +91,15 @@
                   <!--<p class="card-text mb-2">Make your app management easy and fun!</p>-->
                   <form class="auth-register-form mt-2" action="index.html" method="POST" novalidate="novalidate">
                     <div class="form-group">
-                      <label class="form-label" for="register-username">Username</label>
-                      <input class="form-control" id="register-username" type="text" name="register-username" placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1">
+                      <label class="form-label" for="register-fname">First Name</label>
+                      <input class="form-control" id="register-fname" type="text" name="register-fname" placeholder="John" aria-describedby="register-fname" autofocus="" tabindex="1">
                     </div>
                     <div class="form-group">
-                      <label class="form-label" for="register-email">Email</label>
+                      <label class="form-label" for="register-lname">Last Name</label>
+                      <input class="form-control" id="register-lname" type="text" name="register-lname" placeholder="Doe" aria-describedby="register-lname" autofocus="" tabindex="1">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="register-email">Email/Contact No.</label>
                       <input class="form-control" id="register-email" type="text" name="register-email" placeholder="john@example.com" aria-describedby="register-email" tabindex="2">
                     </div>
                     <div class="form-group">
@@ -103,10 +107,10 @@
                         <label>Role</label>
                         <div class="position-relative" data-select2-id="51"><select data-placeholder="Select a state..." class="select2-icons form-control select2-hidden-accessible" id="select2-icons" data-select2-id="select2-icons" tabindex="-1" aria-hidden="true">
                           <optgroup label="Role" data-select2-id="59">
-                            <option value="CSE"data-icon="computer" selected="" data-select2-id="25">Student</option>
-                            <option value="MECH" data-icon="mechanic" data-select2-id="60">Faculty</option>
-                            <option value="ECE" data-icon="electronics" data-select2-id="61">Admin</option>
-                            <option value="EEE" data-icon="electrical" data-select2-id="62">Principal</option>
+                            <option value="Student"data-icon="Student" selected="" data-select2-id="25">Student</option>
+                            <option value="Faculty" data-icon="Faculty" data-select2-id="60">Faculty</option>
+                            <option value="Complaint Manager" data-icon="Complaint Manager" data-select2-id="61">Complaint Manager</option>
+                            
                             
                             
                           </optgroup>

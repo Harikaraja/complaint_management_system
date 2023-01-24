@@ -1,3 +1,2 @@
 from django.http import HttpResponse
-def index(request):
-    return "Hello"
+from django.shortcuts import render

@@ -144,7 +144,23 @@
       </div>
     </div>
     <!-- END: Content-->
-
+     <!--Adding Toast messages-->
+    <div class="toast-container position-fixed p-2" style="top: .5rem; right: 2rem;">
+      {% if messages %}
+      {% for message in messages %}
+      <div class="toast toast-stacked fade show" role="alert" aria-live="assertive" aria-atomic="true"
+          data-delay="5000" style="border: 2px solid black;">
+          <div class="toast-header">
+              <strong class="mr-auto">{{message}}</strong>
+              <button type="button" class="ml-1 close" data-dismiss="toast" aria-label="Close"
+                  onclick="toast_close(this)">
+                  <span aria-hidden="true">×</span>
+              </button>
+          </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+  </div>
 
     <!-- BEGIN: Vendor JS-->
     <script src="{% static 'app-assets\vendors\js\vendors.min.js' %}"></script>
@@ -170,6 +186,9 @@
           feather.replace({ width: 14, height: 14 });
         }
       })
+      function toast_close(ele) {
+                ele.parentElement.parentElement.style.display = 'none'
+            }
     </script>
   
   

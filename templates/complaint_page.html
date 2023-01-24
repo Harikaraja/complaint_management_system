@@ -129,6 +129,23 @@
           <footer class="footer footer-static footer-light footer-shadow">
             <p class="clearfix mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT  © 2020<a class="ml-25" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-right d-none d-md-block">Hand-crafted &amp; Made with<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span></p>
           </footer>
+          <!--Adding Toast messages-->
+    <div class="toast-container position-fixed p-2" style="top: .5rem; right: 2rem;">
+      {% if messages %}
+      {% for message in messages %}
+      <div class="toast toast-stacked fade show" role="alert" aria-live="assertive" aria-atomic="true"
+          data-delay="5000" style="border: 2px solid black;">
+          <div class="toast-header">
+              <strong class="mr-auto">{{message}}</strong>
+              <button type="button" class="ml-1 close" data-dismiss="toast" aria-label="Close"
+                  onclick="toast_close(this)">
+                  <span aria-hidden="true">×</span>
+              </button>
+          </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+  </div>
           <script src="{% static 'app-assets\vendors\js\vendors.min.js' %}"></script>
           <script src="{% static 'app-assets\vendors\js\ui\jquery.sticky.js' %}"></script>
           <script src="{% static 'app-assets\js\core\app-menu.min.js' %}"></script>
@@ -140,6 +157,9 @@
                 feather.replace({ width: 14, height: 14 });
               }
             })
+            function toast_close(ele) {
+                ele.parentElement.parentElement.style.display = 'none'
+            }
           </script>  
     </body>
 </html>

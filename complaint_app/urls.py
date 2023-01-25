@@ -6,4 +6,5 @@ urlpatterns = [
     path('registration_page',views.registration_page,name='registration_page'),
     path('fcomplaint',views.fcomplaint,name='fcomplaint'),
     path('student_complaint',views.student_complaint,name='student_complaints'),
+    path('complaint_page',views.complaint_page,name='complaint_page'),
 ]
